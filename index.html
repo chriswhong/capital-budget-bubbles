@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 <style>
 #viz {
   height:100%;
-  margin-right: 292px;
+
 }
 
 circle {
@@ -19,8 +20,9 @@ circle.highlight{
   opacity:1;
 }
 
-body {
+body,html {
   background:#000;
+  height:100%;
 }
 
 #sideBar {
@@ -55,13 +57,94 @@ div[class^='agency']:hover {
   color:steelblue;
 }
 
+.navbar-inverse {
+  background: url('http://www.phila.gov/Style%20Library/Images/bodyBG.jpg');
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 23px;
+}
+
+.money, .navbar-brand>img {
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  margin-right: 10px;
+}
+
+.navbar-right {
+  margin-right: 0px;
+}
+
+.categoryBox {
+  border-radius: 10px;
+  width: 250px;
+}
+
+#sidebarLeft {
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+#sidebarRight {
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
 
 </style>
+
 <body>
-<div id = "viz"></div>
-<div id = "sideBar"></div>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class = 'money' src = "img/money.png">Philadelphia's FY2012 General Fund</a>
+    </div>
+
+ 
+      <button type="button" class="btn btn-default navbar-btn  navbar-right">About</button>
+      
+     
+      
+ 
+  </div><!-- /.container-fluid -->
+</div>
+<div class="container-fluid">
+  <div id = "viz"></div>
+  <div id = "sidebarLeft">
+    <div id = "categoryBox0" class = 'categoryBox'></div>
+    <div id = "categoryBox2" class = 'categoryBox'></div>
+    <div id = "categoryBox3" class = 'categoryBox'></div>
+  </div>
+  <div id = "sidebarRight">
+    <div id = "categoryBox1" class = 'categoryBox'></div>
+
+    <div id = "categoryBox4" class = 'categoryBox'></div>
+    <div id = "categoryBox5" class = 'categoryBox'></div>
+    <div id = "categoryBox6" class = 'categoryBox'></div>
+    <div id = "categoryBox7" class = 'categoryBox'></div>
+    <div id = "categoryBox8" class = 'categoryBox'></div>
+  </div>
+</div>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 //based on http://jsfiddle.net/andycooper/PcjUR/1/ and Jim Vallandingham's Tutorial
@@ -88,12 +171,27 @@ var margin = {
 
 var brewerScale = ['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)'];
 
+  //style categoryBoxes with our 9 colors
+  brewerScale.forEach(function(color, i){
+    $('#categoryBox' + i).css('background',color)
+  })
+
+
 d3.json('./cleanedData.json', function(data) {
     
     var i = 0;
+
     data.forEach(function(item){
       item.id = i;
-      $('#sideBar').append("<div class = 'agency" + item.id + "'>" + item.department +"</div>");
+
+      var thisCategory = mapCategories(item);
+      console.log(thisCategory);
+
+      $('#categoryBox' + thisCategory).append("<div class = 'agency" + item.id + "'>" + item.department +"</div>");
+
+      //$('#sideBar').append("<div class = 'agency" + item.id + "'>" + item.department +"</div>");
+
+
       i++;
     });
 
@@ -106,7 +204,7 @@ d3.json('./cleanedData.json', function(data) {
         var thisAgency = $(this).html();
         nodes.forEach(function(d){
           if(d.department == thisAgency) {
-            d.radius = d.radius + 40;
+            d.radius = d.radius + 30;
           }
         });
         force.start();
@@ -119,7 +217,7 @@ d3.json('./cleanedData.json', function(data) {
       
       nodes.forEach(function(d){
           if(d.department == thisAgency) {
-            d.radius = d.radius - 40;
+            d.radius = d.radius - 30;
           }
       });
       
@@ -180,7 +278,7 @@ d3.json('./cleanedData.json', function(data) {
       .size([width, height])
       .gravity(-0.01 )
       //.charge(charge)
-      .friction(.6)
+      .friction(.7)
       .on("tick", tick)
       .start();
 
@@ -244,7 +342,7 @@ d3.json('./cleanedData.json', function(data) {
             
 
             circle
-              
+              .each(cluster(10 * e.alpha * e.alpha))
               .each(collide(.3))
               .each(moveTowardsCenter(.1))
               .attr("cx", function(d) {
@@ -256,7 +354,7 @@ d3.json('./cleanedData.json', function(data) {
               });
 
             if(firstTicks) {
-                circle.each(cluster(10 * e.alpha * e.alpha));
+                
             }
  
 
