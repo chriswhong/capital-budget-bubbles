@@ -550,7 +550,7 @@
     "delta":10330000
   },
   {
-    "category":"Promotion and Public Relations   ",
+    "category":"Promotion and Public Relations",
     "department":"City Representative",
     "originalBudget":908000,
     "finalBudget":908000,
@@ -560,7 +560,7 @@
     "delta":-25000
   },
   {
-    "category":"Promotion and Public Relations   ",
+    "category":"Promotion and Public Relations",
     "department":"Commerce",
     "originalBudget":18647000,
     "finalBudget":18647000,
@@ -590,7 +590,7 @@
     "delta":354000
   },
   {
-    "category":"Administration of Justice    ",
+    "category":"Administration of Justice",
     "department":"Register of Wills",
     "originalBudget":3399000,
     "finalBudget":3399000,
@@ -610,7 +610,7 @@
     "delta":383000
   },
   {
-    "category":"Administration of Justice    ",
+    "category":"Administration of Justice",
     "department":"Sheriff",
     "originalBudget":13089000,
     "finalBudget":15463000,
@@ -620,7 +620,7 @@
     "delta":1232000
   },
   {
-    "category":"Administration of Justice    ",
+    "category":"Administration of Justice",
     "department":"First Judicial District",
     "originalBudget":109275000,
     "finalBudget":115581000,
@@ -640,7 +640,7 @@
     "delta":1412000
   },
   {
-    "category":"Conduct of Elections    ",
+    "category":"Conduct of Elections",
     "department":"City Commissioners",
     "originalBudget":9104000,
     "finalBudget":9179000,
