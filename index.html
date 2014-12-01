@@ -3,8 +3,12 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 <style>
 #viz {
-  height:100%;
-
+  height: 750px;
+  width: 750px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 circle {
@@ -84,20 +88,43 @@ div[class^='agency']:hover {
 .categoryBox {
   border-radius: 10px;
   width: 250px;
+  padding: 11px;
+  box-sizing: border-box;
+  margin: 4px;
+  box-shadow: inset 0 0 7px #736A6A;
+  line-height: 13px;
+  font-size: 11px;
 }
 
 #sidebarLeft {
-  width: 250px;
+
   position: absolute;
   top: 50px;
   left: 0;
 }
 
 #sidebarRight {
-  width: 250px;
+
   position: absolute;
   top: 50px;
   right: 0;
+}
+
+.categoryBox h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.categoryBox div {
+  margin-left: 7px;
+}
+
+.categoryBox .highlight {
+  font-weight: bold;
+  background:yellow;
+  box-shadow: 0px 0px 5px 5px rgba(247, 255, 0, 1);
 }
 
 </style>
@@ -127,18 +154,37 @@ div[class^='agency']:hover {
 <div class="container-fluid">
   <div id = "viz"></div>
   <div id = "sidebarLeft">
-    <div id = "categoryBox0" class = 'categoryBox'></div>
-    <div id = "categoryBox2" class = 'categoryBox'></div>
-    <div id = "categoryBox3" class = 'categoryBox'></div>
+    <div id = "categoryBox0" class = 'categoryBox'>
+      <h3>General Government<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h3>
+    </div>
+    <div id = "categoryBox2" class = 'categoryBox'>
+      <h3>Financial Management<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+    <div id = "categoryBox3" class = 'categoryBox'>
+      <h3>City-Wide Appropriations Under the Director of Finance<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+    <div id = "categoryBox8" class = 'categoryBox'>
+      <h3>Conduct of Elections<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
   </div>
   <div id = "sidebarRight">
-    <div id = "categoryBox1" class = 'categoryBox'></div>
+    <div id = "categoryBox1" class = 'categoryBox'>
+      <h3>Operation of Service Departments<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
 
-    <div id = "categoryBox4" class = 'categoryBox'></div>
-    <div id = "categoryBox5" class = 'categoryBox'></div>
-    <div id = "categoryBox6" class = 'categoryBox'></div>
-    <div id = "categoryBox7" class = 'categoryBox'></div>
-    <div id = "categoryBox8" class = 'categoryBox'></div>
+    <div id = "categoryBox4" class = 'categoryBox'>
+      <h3>Promotion and Public Relations<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+    <div id = "categoryBox5" class = 'categoryBox'>
+      <h3>Personnel<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+    <div id = "categoryBox6" class = 'categoryBox'>
+      <h3>Administration of Justice<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+    <div id = "categoryBox7" class = 'categoryBox'>
+      <h3>City-Wide Appropriations Under the First Judicial District<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></h3>
+    </div>
+   
   </div>
 </div>
 
@@ -155,7 +201,7 @@ var margin = {
         left: 0
     },
     width = $('#viz').width() - margin.left - margin.right,
-    height = $(window).height() - margin.top - margin.bottom,
+    height = $('#viz').height() - margin.top - margin.bottom,
     n = 6,
     m = 1,
     padding = 200,
@@ -198,6 +244,7 @@ d3.json('./cleanedData.json', function(data) {
     $('div[class^=agency]').mouseover(function(){
       firstTicks = false;
       var thisClass = $(this).attr('class');
+      $(this).toggleClass('highlight');
       //$('circle.' + thisClass).animate({
       d3.select('circle.' + thisClass).attr('class','highlight ' + thisClass);
         //.transition().duration(250).style('fill','red');
@@ -211,6 +258,7 @@ d3.json('./cleanedData.json', function(data) {
     }).mouseout(function(){
       //firstTicks = true;
       var thisClass = $(this).attr('class');
+      $(this).toggleClass('highlight');
       d3.select('circle.' + thisClass).attr('class',thisClass);
         //.transition().duration(250).style('fill','#1B8BCD');
       var thisAgency = $(this).html();
