@@ -1,0 +1,652 @@
+[
+  {
+    "category":"General Government",
+    "department":"City Council",
+    "originalBudget":15049,
+    "finalBudget":15049,
+    "fy2012Actual":13758,
+    "finalBudgetToActual":1291,
+    "fy2011Actual":13772,
+    "delta":-14
+  },
+  {
+    "category":"General Government",
+    "department":"Mayor's Office",
+    "originalBudget":3787,
+    "finalBudget":3764,
+    "fy2012Actual":3514,
+    "finalBudgetToActual":250,
+    "fy2011Actual":3598,
+    "delta":-84
+  },
+  {
+    "category":"General Government",
+    "department":"Scholarships",
+    "originalBudget":200,
+    "finalBudget":200,
+    "fy2012Actual":196,
+    "finalBudgetToActual":4,
+    "fy2011Actual":200,
+    "delta":-4
+  },
+  {
+    "category":"General Government",
+    "department":"Mural Arts Program",
+    "originalBudget":1060,
+    "finalBudget":1060,
+    "fy2012Actual":996,
+    "finalBudgetToActual":64,
+    "fy2011Actual":961,
+    "delta":35
+  },
+  {
+    "category":"General Government",
+    "department":"Labor Relations",
+    "originalBudget":552,
+    "finalBudget":552,
+    "fy2012Actual":517,
+    "finalBudgetToActual":35,
+    "fy2011Actual":457,
+    "delta":60
+  },
+  {
+    "category":"General Government",
+    "department":"MDO Office of Technology",
+    "originalBudget":63944,
+    "finalBudget":63248,
+    "fy2012Actual":63272,
+    "finalBudgetToActual":-24,
+    "fy2011Actual":61348,
+    "delta":1924
+  },
+  {
+    "category":"General Government",
+    "department":"Office of Property Assessment",
+    "originalBudget":11741,
+    "finalBudget":9741,
+    "fy2012Actual":7967,
+    "finalBudgetToActual":1774,
+    "fy2011Actual":5730,
+    "delta":2237
+  },
+  {
+    "category":"General Government",
+    "department":"Transportation",
+    "originalBudget":480,
+    "finalBudget":514,
+    "fy2012Actual":498,
+    "finalBudgetToActual":16,
+    "fy2011Actual":419,
+    "delta":79
+  },
+  {
+    "category":"General Government",
+    "department":"Law",
+    "originalBudget":13119,
+    "finalBudget":15122,
+    "fy2012Actual":14501,
+    "finalBudgetToActual":621,
+    "fy2011Actual":17114,
+    "delta":-2613
+  },
+  {
+    "category":"General Government",
+    "department":"Board of Ethics",
+    "originalBudget":810,
+    "finalBudget":810,
+    "fy2012Actual":683,
+    "finalBudgetToActual":127,
+    "fy2011Actual":681,
+    "delta":2
+  },
+  {
+    "category":"General Government",
+    "department":"Youth Commission",
+    "originalBudget":96,
+    "finalBudget":96,
+    "fy2012Actual":42,
+    "finalBudgetToActual":54,
+    "fy2011Actual":78,
+    "delta":-36
+  },
+  {
+    "category":"General Government",
+    "department":"Inspector General",
+    "originalBudget":1281,
+    "finalBudget":1281,
+    "fy2012Actual":1239,
+    "finalBudgetToActual":42,
+    "fy2011Actual":1171,
+    "delta":68
+  },
+  {
+    "category":"General Government",
+    "department":"City Planning Commission",
+    "originalBudget":2257,
+    "finalBudget":2257,
+    "fy2012Actual":2209,
+    "finalBudgetToActual":48,
+    "fy2011Actual":2248,
+    "delta":-39
+  },
+  {
+    "category":"General Government",
+    "department":"Commission on Human Relations",
+    "originalBudget":2039,
+    "finalBudget":2039,
+    "fy2012Actual":1830,
+    "finalBudgetToActual":209,
+    "fy2011Actual":1942,
+    "delta":-112
+  },
+  {
+    "category":"General Government",
+    "department":"Zoning Code Commisssion",
+    "originalBudget":225,
+    "finalBudget":225,
+    "fy2012Actual":216,
+    "finalBudgetToActual":9,
+    "fy2011Actual":465,
+    "delta":-249
+  },
+  {
+    "category":"General Government",
+    "department":"Arts & Culture",
+    "originalBudget":2670,
+    "finalBudget":2670,
+    "fy2012Actual":2662,
+    "finalBudgetToActual":8,
+    "fy2011Actual":2550,
+    "delta":112
+  },
+  {
+    "category":"General Government",
+    "department":"Board of Revision of Taxes",
+    "originalBudget":723,
+    "finalBudget":759,
+    "fy2012Actual":576,
+    "finalBudgetToActual":183,
+    "fy2011Actual":1893,
+    "delta":-1317
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Housing",
+    "originalBudget":3020,
+    "finalBudget":4213,
+    "fy2012Actual":4213,
+    "finalBudgetToActual":0,
+    "fy2011Actual":2251,
+    "delta":1962
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Managing Director",
+    "originalBudget":22972,
+    "finalBudget":23066,
+    "fy2012Actual":21732,
+    "finalBudgetToActual":1334,
+    "fy2011Actual":15954,
+    "delta":5778
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Police",
+    "originalBudget":550686,
+    "finalBudget":568921,
+    "fy2012Actual":568922,
+    "finalBudgetToActual":-1,
+    "fy2011Actual":551450,
+    "delta":17472
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Streets",
+    "originalBudget":121353,
+    "finalBudget":123661,
+    "fy2012Actual":123523,
+    "finalBudgetToActual":138,
+    "fy2011Actual":131004,
+    "delta":-7481
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Fire",
+    "originalBudget":190032,
+    "finalBudget":195583,
+    "fy2012Actual":195532,
+    "finalBudgetToActual":51,
+    "fy2011Actual":198042,
+    "delta":-2510
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Public Health",
+    "originalBudget":110426,
+    "finalBudget":107782,
+    "fy2012Actual":107770,
+    "finalBudgetToActual":12,
+    "fy2011Actual":108923,
+    "delta":-1153
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Office-Behavioral Health/Mental Retardation",
+    "originalBudget":14272,
+    "finalBudget":14272,
+    "fy2012Actual":14240,
+    "finalBudgetToActual":32,
+    "fy2011Actual":14272,
+    "delta":-32
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Parks and Recreation",
+    "originalBudget":46326,
+    "finalBudget":48381,
+    "fy2012Actual":47344,
+    "finalBudgetToActual":1037,
+    "fy2011Actual":47084,
+    "delta":260
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Atwater Kent Museum",
+    "originalBudget":269,
+    "finalBudget":268,
+    "fy2012Actual":266,
+    "finalBudgetToActual":2,
+    "fy2011Actual":267,
+    "delta":-1
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Public Property",
+    "originalBudget":168833,
+    "finalBudget":170496,
+    "fy2012Actual":169143,
+    "finalBudgetToActual":1353,
+    "fy2011Actual":171142,
+    "delta":-1999
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Department of Human Services",
+    "originalBudget":111935,
+    "finalBudget":103581,
+    "fy2012Actual":103761,
+    "finalBudgetToActual":-180,
+    "fy2011Actual":543584,
+    "delta":-439823
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Philadelphia Prisons",
+    "originalBudget":227173,
+    "finalBudget":232237,
+    "fy2012Actual":232232,
+    "finalBudgetToActual":5,
+    "fy2011Actual":232219,
+    "delta":13
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Office of Supportive Housing",
+    "originalBudget":36466,
+    "finalBudget":38502,
+    "fy2012Actual":38384,
+    "finalBudgetToActual":118,
+    "fy2011Actual":36368,
+    "delta":2016
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Office of Fleet Management",
+    "originalBudget":53652,
+    "finalBudget":56645,
+    "fy2012Actual":55944,
+    "finalBudgetToActual":701,
+    "fy2011Actual":52173,
+    "delta":3771
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Licenses and Inspections",
+    "originalBudget":21781,
+    "finalBudget":22022,
+    "fy2012Actual":21429,
+    "finalBudgetToActual":593,
+    "fy2011Actual":18381,
+    "delta":3048
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Board of L & I Review",
+    "originalBudget":156,
+    "finalBudget":156,
+    "fy2012Actual":124,
+    "finalBudgetToActual":32,
+    "fy2011Actual":136,
+    "delta":-12
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Board of Building Standards",
+    "originalBudget":72,
+    "finalBudget":72,
+    "fy2012Actual":58,
+    "finalBudgetToActual":14,
+    "fy2011Actual":61,
+    "delta":-3
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Zoning Board of Adjustment",
+    "originalBudget":363,
+    "finalBudget":375,
+    "fy2012Actual":366,
+    "finalBudgetToActual":9,
+    "fy2011Actual":330,
+    "delta":36
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Records",
+    "originalBudget":4009,
+    "finalBudget":4009,
+    "fy2012Actual":3841,
+    "finalBudgetToActual":168,
+    "fy2011Actual":3982,
+    "delta":-141
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Philadelphia Historical Commission",
+    "originalBudget":388,
+    "finalBudget":388,
+    "fy2012Actual":359,
+    "finalBudgetToActual":29,
+    "fy2011Actual":377,
+    "delta":-18
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Art Museum",
+    "originalBudget":2300,
+    "finalBudget":2315,
+    "fy2012Actual":2315,
+    "finalBudgetToActual":0,
+    "fy2011Actual":2350,
+    "delta":-35
+  },
+  {
+    "category":"Operation of Service Departments",
+    "department":"Philadelphia Free Library",
+    "originalBudget":33863,
+    "finalBudget":33994,
+    "fy2012Actual":33399,
+    "finalBudgetToActual":595,
+    "fy2011Actual":32549,
+    "delta":850
+  },
+  {
+    "category":"Financial Management",
+    "department":"Office of Director of Finance",
+    "originalBudget":9685,
+    "finalBudget":12547,
+    "fy2012Actual":12469,
+    "finalBudgetToActual":78,
+    "fy2011Actual":10431,
+    "delta":2038
+  },
+  {
+    "category":"Financial Management",
+    "department":"Department of Revenue",
+    "originalBudget":19900,
+    "finalBudget":19929,
+    "fy2012Actual":18850,
+    "finalBudgetToActual":1079,
+    "fy2011Actual":14160,
+    "delta":4690
+  },
+  {
+    "category":"Financial Management",
+    "department":"Sinking Fund Commission",
+    "originalBudget":223906,
+    "finalBudget":201236,
+    "fy2012Actual":201046,
+    "finalBudgetToActual":190,
+    "fy2011Actual":197918,
+    "delta":3128
+  },
+  {
+    "category":"Financial Management",
+    "department":"Procurement",
+    "originalBudget":4152,
+    "finalBudget":4664,
+    "fy2012Actual":4461,
+    "finalBudgetToActual":203,
+    "fy2011Actual":4819,
+    "delta":-358
+  },
+  {
+    "category":"Financial Management",
+    "department":"City Treasurer",
+    "originalBudget":905,
+    "finalBudget":905,
+    "fy2012Actual":825,
+    "finalBudgetToActual":80,
+    "fy2011Actual":761,
+    "delta":64
+  },
+  {
+    "category":"Financial Management",
+    "department":"Audit of City Operations",
+    "originalBudget":7556,
+    "finalBudget":7556,
+    "fy2012Actual":7289,
+    "finalBudgetToActual":267,
+    "fy2011Actual":7840,
+    "delta":-551
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Fringe Benefits",
+    "originalBudget":1022703,
+    "finalBudget":1066156,
+    "fy2012Actual":1066251,
+    "finalBudgetToActual":-95,
+    "fy2011Actual":968957,
+    "delta":97294
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"PGW Rental Reimbursement",
+    "originalBudget":0,
+    "finalBudget":0,
+    "fy2012Actual":0,
+    "finalBudgetToActual":0,
+    "fy2011Actual":1700,
+    "delta":-1700
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Community College of Philadelphia",
+    "originalBudget":25409,
+    "finalBudget":25409,
+    "fy2012Actual":25409,
+    "finalBudgetToActual":0,
+    "fy2011Actual":25409,
+    "delta":0
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Legal Services",
+    "originalBudget":37566,
+    "finalBudget":37066,
+    "fy2012Actual":37066,
+    "finalBudgetToActual":0,
+    "fy2011Actual":36616,
+    "delta":450
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Hero Award",
+    "originalBudget":25,
+    "finalBudget":28,
+    "fy2012Actual":28,
+    "finalBudgetToActual":0,
+    "fy2011Actual":35,
+    "delta":-7
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Refunds",
+    "originalBudget":250,
+    "finalBudget":0,
+    "fy2012Actual":0,
+    "finalBudgetToActual":0,
+    "fy2011Actual":0,
+    "delta":0
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Indemnities",
+    "originalBudget":33120,
+    "finalBudget":14,
+    "fy2012Actual":14,
+    "finalBudgetToActual":0,
+    "fy2011Actual":0,
+    "delta":14
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Office of Risk Management",
+    "originalBudget":3018,
+    "finalBudget":2926,
+    "fy2012Actual":2925,
+    "finalBudgetToActual":1,
+    "fy2011Actual":4079,
+    "delta":-1154
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Witness Fees",
+    "originalBudget":172,
+    "finalBudget":141,
+    "fy2012Actual":140,
+    "finalBudgetToActual":1,
+    "fy2011Actual":84,
+    "delta":56
+  },
+  {
+    "category":"City-Wide Appropriations Under the Director of Finance",
+    "department":"Contribution to School District",
+    "originalBudget":48930,
+    "finalBudget":48930,
+    "fy2012Actual":48930,
+    "finalBudgetToActual":0,
+    "fy2011Actual":38600,
+    "delta":10330
+  },
+  {
+    "category":"Promotion and Public Relations",
+    "department":"City Representative",
+    "originalBudget":908,
+    "finalBudget":908,
+    "fy2012Actual":879,
+    "finalBudgetToActual":29,
+    "fy2011Actual":904,
+    "delta":-25
+  },
+  {
+    "category":"Promotion and Public Relations",
+    "department":"Commerce",
+    "originalBudget":18647,
+    "finalBudget":18647,
+    "fy2012Actual":18361,
+    "finalBudgetToActual":286,
+    "fy2011Actual":18323,
+    "delta":38
+  },
+  {
+    "category":"Personnel",
+    "department":"Civic Service Commission",
+    "originalBudget":170,
+    "finalBudget":170,
+    "fy2012Actual":167,
+    "finalBudgetToActual":3,
+    "fy2011Actual":168,
+    "delta":-1
+  },
+  {
+    "category":"Personnel",
+    "department":"Personnel Director",
+    "originalBudget":5228,
+    "finalBudget":5228,
+    "fy2012Actual":4945,
+    "finalBudgetToActual":283,
+    "fy2011Actual":4591,
+    "delta":354
+  },
+  {
+    "category":"Administration of Justice",
+    "department":"Register of Wills",
+    "originalBudget":3399,
+    "finalBudget":3399,
+    "fy2012Actual":3312,
+    "finalBudgetToActual":87,
+    "fy2011Actual":3239,
+    "delta":73
+  },
+  {
+    "category":"Administration of Justice",
+    "department":"District Attorney",
+    "originalBudget":31055,
+    "finalBudget":31310,
+    "fy2012Actual":30888,
+    "finalBudgetToActual":422,
+    "fy2011Actual":30505,
+    "delta":383
+  },
+  {
+    "category":"Administration of Justice",
+    "department":"Sheriff",
+    "originalBudget":13089,
+    "finalBudget":15463,
+    "fy2012Actual":15462,
+    "finalBudgetToActual":1,
+    "fy2011Actual":14230,
+    "delta":1232
+  },
+  {
+    "category":"Administration of Justice",
+    "department":"First Judicial District",
+    "originalBudget":109275,
+    "finalBudget":115581,
+    "fy2012Actual":115562,
+    "finalBudgetToActual":19,
+    "fy2011Actual":115412,
+    "delta":150
+  },
+  {
+    "category":"City-Wide Appropriations Under the First Judicial District",
+    "department":"Juror Fees",
+    "originalBudget":1542,
+    "finalBudget":1412,
+    "fy2012Actual":1412,
+    "finalBudgetToActual":0,
+    "fy2011Actual":0,
+    "delta":1412
+  },
+  {
+    "category":"Conduct of Elections",
+    "department":"City Commissioners",
+    "originalBudget":9104,
+    "finalBudget":9179,
+    "fy2012Actual":8611,
+    "finalBudgetToActual":568,
+    "fy2011Actual":8987,
+    "delta":-376
+  }
+]
