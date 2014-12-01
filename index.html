@@ -3,8 +3,15 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 <style>
 #viz {
-  height: 750px;
-  width: 750px;
+  height: 100vh;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+svg {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -181,9 +188,7 @@ right: -216px;
  
   </div><!-- /.container-fluid -->
 </div>
-<div class="container-fluid">
-  <div id = "viz">
-    <div id="flyout" style=" left: 336px; top: 418px;">
+  <div id="flyout" style=" left: 336px; top: 418px;">
     <div id="flyoutTop">
         <div id="flyoutDepartment"></div>
         <div id="flyoutFinalBudget"></div>
@@ -193,6 +198,8 @@ right: -216px;
     <div id="flyoutBottom">
     </div>
 </div>
+  <div id = "viz">
+    
   </div>
   <div id = "sidebarLeft">
     <div id = "categoryBox0" class = 'categoryBox'>
@@ -228,7 +235,7 @@ right: -216px;
    
   </div>
   
-</div>
+
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -236,14 +243,8 @@ right: -216px;
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 //based on http://jsfiddle.net/andycooper/PcjUR/1/ and Jim Vallandingham's Tutorial
-var margin = {
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0
-    },
-    width = $('#viz').width() - margin.left - margin.right,
-    height = $('#viz').height() - margin.top - margin.bottom,
+var width = $('#viz').width() - 100,
+    height = $('#viz').height() - 100,
     n = 6,
     m = 1,
     padding = 200,
@@ -258,6 +259,8 @@ var margin = {
     firstTicks = true,
     flyoutTimer;
 
+console.log(width);
+
 var brewerScale = ['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)'];
 
   //style categoryBoxes with our 9 colors
@@ -265,11 +268,11 @@ var brewerScale = ['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb
     $('#categoryBox' + i).css('background',color)
   })
 
-$('#viz').mousemove(function(e) {
+$('body').mousemove(function(e) {
       var flyoutHeight = $('#flyoutTop').height();
       console.log(flyoutHeight);
 
-      $('#flyout').css('left',e.clientX - 378).css('top',e.clientY - flyoutHeight - 70);
+      $('#flyout').css('left',e.clientX - 220).css('top',e.clientY - flyoutHeight - 60);
 
     });
 d3.json('./cleanedData.json', function(data) {
@@ -386,10 +389,10 @@ d3.json('./cleanedData.json', function(data) {
 
     var svg = d3.select("#viz")
       .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("width", width)
+      .attr("height", height)
       .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var circle = svg.selectAll("circle")
       .data(nodes).enter().append("circle")
