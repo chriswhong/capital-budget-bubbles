@@ -15,7 +15,7 @@ circle {
   fill: #1B8BCD;
   stroke: #2C2C2C;
   stroke-width: 2px;
-  opacity: .6;
+  opacity: .75;
 }
 
 circle.highlight{
@@ -127,6 +127,36 @@ div[class^='agency']:hover {
   box-shadow: 0px 0px 5px 5px rgba(247, 255, 0, 1);
 }
 
+#flyout {
+font-family: 'Maven Pro', sans-serif;
+position: absolute;
+width: 250px;
+color: #fff;
+
+top: 0;
+z-index: 40;
+}
+
+#flyoutTop {
+background: #16639A;
+padding: 8px;
+font-size: 14px;
+}
+
+#flyoutBottom {
+display: block;
+height: 0;
+width: 0;
+border-left: 35px #04364F solid;
+border-bottom: 19px solid rgba(255,255,255,0);
+position: relative;
+right: -216px;
+}
+
+#flyoutDepartment {
+  font-size:22px;
+}
+
 </style>
 
 <body>
@@ -152,7 +182,18 @@ div[class^='agency']:hover {
   </div><!-- /.container-fluid -->
 </div>
 <div class="container-fluid">
-  <div id = "viz"></div>
+  <div id = "viz">
+    <div id="flyout" style=" left: 336px; top: 418px;">
+    <div id="flyoutTop">
+        <div id="flyoutDepartment"></div>
+        <div id="flyoutFinalBudget"></div>
+        <div id="flyout2012Actual"></div>
+        
+    </div>
+    <div id="flyoutBottom">
+    </div>
+</div>
+  </div>
   <div id = "sidebarLeft">
     <div id = "categoryBox0" class = 'categoryBox'>
       <h3>General Government<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h3>
@@ -186,6 +227,7 @@ div[class^='agency']:hover {
     </div>
    
   </div>
+  
 </div>
 
 
@@ -213,7 +255,8 @@ var margin = {
       y: height / 2
     },
     damper = .1,
-    firstTicks = true;
+    firstTicks = true,
+    flyoutTimer;
 
 var brewerScale = ['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)'];
 
@@ -222,7 +265,13 @@ var brewerScale = ['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb
     $('#categoryBox' + i).css('background',color)
   })
 
+$('#viz').mousemove(function(e) {
+      var flyoutHeight = $('#flyoutTop').height();
+      console.log(flyoutHeight);
 
+      $('#flyout').css('left',e.clientX - 378).css('top',e.clientY - flyoutHeight - 70);
+
+    });
 d3.json('./cleanedData.json', function(data) {
     
     var i = 0;
@@ -242,9 +291,9 @@ d3.json('./cleanedData.json', function(data) {
     });
 
     $('div[class^=agency]').mouseover(function(){
-      firstTicks = false;
+ 
       var thisClass = $(this).attr('class');
-      $(this).toggleClass('highlight');
+      $(this).addClass('highlight');
       //$('circle.' + thisClass).animate({
       d3.select('circle.' + thisClass).attr('class','highlight ' + thisClass);
         //.transition().duration(250).style('fill','red');
@@ -256,9 +305,10 @@ d3.json('./cleanedData.json', function(data) {
         });
         force.start();
     }).mouseout(function(){
-      //firstTicks = true;
+    
+      $(this).removeClass('highlight');
       var thisClass = $(this).attr('class');
-      $(this).toggleClass('highlight');
+ 
       d3.select('circle.' + thisClass).attr('class',thisClass);
         //.transition().duration(250).style('fill','#1B8BCD');
       var thisAgency = $(this).html();
@@ -271,6 +321,8 @@ d3.json('./cleanedData.json', function(data) {
       
       force.start();
     });
+
+    
 
 
 
@@ -293,6 +345,8 @@ d3.json('./cleanedData.json', function(data) {
             id: d.id,
             category: d.category,
             department: d.department,
+            finalBudget: d.finalBudget,
+            fy2012Actual: d.fy2012Actual,
             radius: radius_scale(parseInt(d.finalBudget)),
             //charge: radius_scale(parseInt(d.finalBudget)),
             x: Math.random() * 900,
@@ -349,7 +403,36 @@ d3.json('./cleanedData.json', function(data) {
       });
 
       circle.transition().duration(800).attr("r", function(d) { return d.radius; });
-      //.call(force.drag);
+
+      circle.on('mouseover', function(d) {
+
+          clearTimeout(flyoutTimer);
+
+        $('.agency' + d.id).toggleClass("highlight");
+        d3.select(this).classed("highlight",true);
+
+
+
+        $('#flyoutDepartment').html(d.department);
+        $('#flyoutFinalBudget').html("Budget: $" + d.finalBudget.toLocaleString());
+        $('#flyout2012Actual').html("Actual Spend: $" + d.fy2012Actual.toLocaleString());
+
+  
+
+
+
+        $('#flyout').fadeIn(10);
+      })
+      .on('mouseout',function(d) {
+        $('.agency' + d.id).toggleClass("highlight");
+        d3.select(this).classed("highlight",false);
+        flyoutTimer = setTimeout(function() {
+          $('#flyout').fadeOut(10);
+        },100)
+
+
+          
+      })
 
 
     function mapCategories(d) {
