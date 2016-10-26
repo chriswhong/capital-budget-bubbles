@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
 
     <title>Philly 2012 Budget Visualization</title>
@@ -9,116 +9,40 @@
     "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel=
     "stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
 
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-target=
-                "#bs-example-navbar-collapse-1" data-toggle="collapse" type=
-                "button"><span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span> <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button> <a class="navbar-brand"
-                href="#"><img class='money' src="img/money.png">Philadelphia's
-                FY2012 General Fund</a>
-            </div><a href="cleanedData.json"><img class='getDataButton' src=
-            "https://raw.githubusercontent.com/betanyc/getDataButton/master/png/125x50.png"></a><button class="btn btn-default navbar-btn navbar-right about"
-            type="button">About</button>
-        </div><!-- /.container-fluid -->
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-target=
+            "#bs-example-navbar-collapse-1" data-toggle="collapse" type=
+            "button"><span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button> <a class="navbar-brand"
+            href="#"><img class='money' src="img/money.png">NYC FY2017 Capital Budget</a>
+        </div><a href="cleanedData.json"><img class='getDataButton' src=
+        "https://raw.githubusercontent.com/betanyc/getDataButton/master/png/125x50.png"></a><button class="btn btn-default navbar-btn navbar-right about"
+        type="button">About</button>
+      </div><!-- /.container-fluid -->
     </div>
 
-    <div id="flyout" style=" left: 336px; top: 418px;">
-        <div id="flyoutTop">
-            <div id="flyoutDepartment"></div>
 
-            <div id="flyoutFinalBudget"></div>
-
-            <div id="flyout2012Actual"></div>
-        </div>
-
-        <div id="flyoutBottom"></div>
-    </div>
 
     <div id="viz"></div>
-
-    <div id="sidebarLeft">
-        <div class='categoryBox' id="categoryBox0">
-            <h3>General Government<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox2">
-            <h3>Financial Management<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox3">
-            <h3>City-Wide Appropriations Under the Director of
-            Finance<span class="glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox8">
-            <h3>Conduct of Elections<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
+    <div id="info">
+      <h1>Hover over the bubbles for details</h1>
+    </div>
+    <div id="sidebar">
+      
     </div>
 
-    <div id="sidebarRight">
-        <div class='categoryBox' id="categoryBox1">
-            <h3>Operation of Service Departments<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox4">
-            <h3>Promotion and Public Relations<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox5">
-            <h3>Personnel<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox6">
-
-            <h3>Administration
-            of Justice<span class=
-            "glyphicon glyphicon-chevron-right"></span></span></h3>
-        </div>
-
-        <div class='categoryBox' id="categoryBox7">
-            <h3>City-Wide Appropriations Under the First Judicial
-            District<span class=
-            "glyphicon glyphicon-chevron-right"></span></h3>
-        </div>
-    </div>
-
-    <div id='mask'></div>
-
-    <div class="popup privacy">
-        <div class="close">
-            &#10006;
-        </div>
-
-        <h2>About this Visualization</h2>
-
-        <p>This Visualization shows the City of Philadelphia's General Fund
-        Budget for Fiscal Year 2012. The bubbles represent the approved budget
-        amount for each subcategory. Hovering over a subcategory name will
-        highlight its corresponding bubble on the chart. Likewise, hovering
-        over a bubble will highlight it's corresponding subcategory name.</p>
-
-        <p>Source Data: <a href=
-        "http://www.opendataphilly.org/opendata/resource/211/city-of-philadelphia-fy2012-financial-report/">
-        City of Philadelphia FY2012 Financial Report (PDF)</a><br>
-        Cleaned up Data in JSON <a href="cleanedData.json">is here</a>.</p>
-
-        <p>By @chris_whong, November 2014</p>
-    </div><script src=
-    "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <script src=
-"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> <script src="http://d3js.org/d3.v3.min.js"></script> <script src="js/script.js"></script>
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script> 
+    <script src="js/script.js"></script>
+  </body>
 </html>

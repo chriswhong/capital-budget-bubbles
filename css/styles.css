@@ -1,9 +1,10 @@
 #viz {
-    height:100vh;
+    padding-top: 50px;
+}
+
+#viz {
+    height:100%;
     width:100%;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
     position:absolute
 }
 
@@ -14,16 +15,43 @@ svg {
     position:absolute
 }
 
+#info {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 40px;
+    max-width: 300px;
+}
+
+#sidebar {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top:50px;
+    bottom: 0;
+    color: #fff;
+    overflow-y: scroll;
+}
+
+.bullet {
+    width: 13px;
+    height: 13px;
+    background-color: steelblue;
+    border-radius: 11px;
+    display: inline-block;
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+}
+
 circle {
-    fill:#1B8BCD;
     stroke:#2C2C2C;
-    stroke-width:2px;
-    opacity:.75
+    stroke-width:1px;
 }
 
 circle.highlight {
-    stroke:#ff0;
-    stroke-width:5;
+    stroke:#fff;
+    stroke-width:2;
     opacity:1
 }
 

@@ -1,0 +1,43 @@
+type,name,fy17cx,fy17cn,fy17f,fy17s,fy17p,fy17total
+AG,Aging,1,44,1,1,,6073000
+BR,Waterway Bridges,,10,8,10,3,539830000
+C,Correction,,13,1,1,,92733000
+CO,Courts,22,30,,4,1,169546000
+CS,Children's Services,,36,4,3,1,61363000
+DP,DoITT,,2,2,,,21591000
+E,Education,,22,3,6,3,3223712000
+ED,Economic Development,3,80,16,12,4,653698000
+EP,Environmental Protection - Equipment,8,7,6,3,1,164296000
+F,Fire Department,,20,8,2,1,202283000
+FA,Ferries and Aviation,,5,4,4,1,293081000
+FT,Franchise Transportation,,2,2,2,2,0
+HA,Housing Authority,,8,1,,,173677000
+HB,Highway Bridges,,100,47,33,9,681573000
+HD,Housing Preservation and Development,,205,34,4,12,453114000
+HH,Homeless Services,,12,3,1,,40844000
+HL,Health and Mental Hygiene,,133,2,1,,41657000
+HN,CUNY,,36,1,5,2,118691000
+HO,Health and Hospitals Corp,,18,3,1,2,329436000
+HR,Human Resources Administration,,52,4,4,,26532000
+HW,Highways,9,125,51,36,32,472873000
+JJ,Juvenile Justice,,2,1,1,,0
+L,NY Research Library,,6,2,,3,15750000
+LB,Brooklyn Public Library,,7,2,1,1,70697000
+LN,New York Public Library,,15,1,1,4,27536000
+LQ,Queens Borough Public Library,,9,1,1,1,56564000
+MT,MTA Bus Company,,2,,2,,0
+P,Parks and Recreation,1,171,45,42,22,767671000
+PO,Police,,25,3,,1,396651000
+PU,EDP Equipment and Finance Costs,1,16,4,1,2,701008000
+PV,Cultural Affairs,,586,15,16,25,271679000
+PW,Public Buildings,,241,6,5,3,163892000
+RE,Real Property,,6,,,1,6521000
+S,Sanitation,,27,8,3,2,186792000
+SE,Sewers,34,30,7,,4,892216000
+ST,Staten Island Rapid Transit,,3,1,1,,375000
+T,Transit Authority,,10,2,2,2,696200000
+TD,Transportation - Equipment,,3,2,1,1,41991000
+TF,Traffic,2,19,6,6,2,132955000
+W,Water Supply,4,1,,,,171330000
+WM,"Water Mains, Sources and Treatment",5,4,4,4,4,827795000
+WP,Water Pollution Control,14,9,13,13,1,812789000
